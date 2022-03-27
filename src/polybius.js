@@ -11,6 +11,7 @@ let valuesPolybius = Object.values(polybiusSquare)
 
   function encoder(input) {
     let result = ""
+    input = input.toLowerCase();
     for (let i = 0; i < input.length; i++) {
       if (newPolybius.includes(input[i])) {
         for (let value in polybiusSquare) {
@@ -27,7 +28,7 @@ let valuesPolybius = Object.values(polybiusSquare)
     return result
   }
   function decoder(input) {
-
+ 
  let newInput = input.replace(/ /g, '00')
  if (newInput.length % 2 != 0) return false;
  let inputArray = newInput.match(/../g);
